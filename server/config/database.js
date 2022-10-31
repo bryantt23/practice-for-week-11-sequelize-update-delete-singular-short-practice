@@ -1,11 +1,11 @@
 module.exports = {
   development: {
-    storage: process.env.DB_FILE,
-    dialect: "sqlite",
-    seederStorage: "sequelize",
+    storage: 'db/dev.db',
+    dialect: 'sqlite',
+    seederStorage: 'sequelize',
     benchmark: true,
     logQueryParameters: true,
-    typeValidation: true,
+    typeValidation: true
     // logging: false
-  },
+  }
 };
