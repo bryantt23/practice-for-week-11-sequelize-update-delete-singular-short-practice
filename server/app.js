@@ -64,6 +64,26 @@ app.put('/puppies/:puppyId', async (req, res, next) => {
 // STEP 2: Delete a puppy by id
 app.delete('/puppies/:puppyId', async (req, res, next) => {
   // Your code here
+  const puppy = await Puppy.findOne({
+    where: {
+      id: req.params.puppyId
+    }
+  });
+  console.log(
+    `
+    
+
+
+
+
+
+
+
+  
+  `,
+    puppy
+  );
+  await puppy.destroy();
 });
 
 // Root route - DO NOT MODIFY
